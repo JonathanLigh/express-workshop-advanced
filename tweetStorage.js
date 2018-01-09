@@ -1,4 +1,3 @@
-var _ = require('lodash');
 var Chance = require('chance');
 var chance = new Chance();
 
