@@ -5,9 +5,6 @@ var bodyParser = require('body-parser');
 var volleyBall = require('volleyball');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
 app.use(volleyBall);
 
