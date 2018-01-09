@@ -57,9 +57,7 @@ var err = new Error('some useful message');
 next(err);
 ~~~
 
-### Add error catching function for all your api routes at the end of your middleware in `index.js` of the `routes` directory.
-
-### Add a "catch all" error catching middleware at the end of your middleware that sends back a 500 status defaulted or perhaps customized ones per different types of errors.
+### Add a "catch all" error handler for all your api routes at the end of your middleware in `index.js` of the `routes` directory that sends back a 500 status defaulted or perhaps customized ones per different types of errors.
 
 ## Step 5: Basic Authorization
 
