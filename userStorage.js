@@ -31,5 +31,8 @@ module.exports = {
 
   getUserByName: function (name) {
     return _.cloneDeep(_.filter(data, name));
+  },
+  createUser: function(name, age, salary) {
+    data[name] = { age: age, salary: salary};
   }
 };

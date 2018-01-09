@@ -1,11 +1,17 @@
 var express = require('express');
 var app = express();
 var chalk = require('chalk');
-var routes = require('./routes');
+var bodyParser = require('body-parser');
+var volleyBall = require('volleyball');
 
-app.get('/', function (req, res, next) {
-  res.send('Root Route');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(volleyBall);
+
+app.use('/api', require('./routes'));
 
 
 var PORT = 8000;

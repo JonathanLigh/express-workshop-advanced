@@ -24,7 +24,7 @@ Once this is working, you'll be able to see request and response messages print 
 
 ## Step 3: Creating the Tweet and User Routes
 
-### Make all application routes go through /api/ with `app.use()`.
+### Make all application routes go through /api with `app.use()`.
 
 ### Create user.js in the routes directory.
 
