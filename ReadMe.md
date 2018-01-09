@@ -10,7 +10,7 @@ You can find a link to download Postman here: https://www.getpostman.com/
 
 ### How to use Postman:
 
-After installing and opening Postman, you'll notice a search bar and a drop down tab to the left of it. With the search bar we can select where and what route we will send a request to e.g. `localhost:8000/api/tweets`. With the drop down tab you can select what type of request you want to make to that api route. If you select the POST request, beneath the seach bar, you will find a series of tabs that read Authorization, Headers, Body, ..., and etc, probably in that order. Select the 'Body' tab, the 'raw' checkbox, and change 'Text' to 'JSON (application/json) in the dropdown. Now enter in a json object to send in the body with the post request.
+After installing and opening Postman, you'll notice a search bar and a drop down tab to the left of it. With the search bar we can select where and what route we will send a request to e.g. `localhost:8000/api/tweets`. With the drop down tab you can select what type of request you want to make to that api route. If you select the POST request, beneath the seach bar, you will find a series of tabs that read Authorization, Headers, Body, ..., and etc, probably in that order. Select the 'Body' tab, the 'raw' checkbox, and change 'Text' to 'JSON (application/json)' in the dropdown. Now enter in a json object to send in the body with the post request.
 
 ## Step 2: Add Body-Parsing and Logging Middleware into app.js
 
@@ -49,19 +49,25 @@ Make sure that the route works even if a query is not provided or only partial q
 
 ## Step 4: Error catching
 
-After verifying your routes works as intended, you'll want to make sure they can handle all other errors eloquently without causing a hard crash through error catching functions.
+After verifying your routes works as intended, you'll want to make sure they can identify and catch errors such as not enough parameters for posting a user or trying to get a user that does not exist. 
 
-### Add error catching functions to all your api routes.
+Hint: 
+~~~
+var err = new Error('some useful message');
+next(err);
+~~~
 
-### Add a "catch all" error catching middleware at the end of your middleware that sends back a 500 status.
+### Add error catching function for all your api routes at the end of your middleware in `index.js` of the `routes` directory.
+
+### Add a "catch all" error catching middleware at the end of your middleware that sends back a 500 status defaulted or perhaps customized ones per different types of errors.
 
 ## Step 5: Basic Authorization
 
 ### Add a file auth.js that exports a auth checking function
 
-Essentially, have that function check if a password provided in the request matches with some "secret" passphrase.
+Essentially, have that function check if a password provided in the request body matches with some "secret" passphrase.
 
-### Use that function in the `/api/tweets/` POST route so only requests to that route with the correct password can post new tweets.
+### Use that function in the `/api/tweets/` POST route so only requests to that route with the correct password in the body can post new tweets.
 
 ## Step 6: Extra Challenge
 
