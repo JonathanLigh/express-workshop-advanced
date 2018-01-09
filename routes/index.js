@@ -8,5 +8,5 @@ router.use('/users', require('./users'));
 
 router.use(function(err, req, res, next) {
     console.error(chalk.red(err.stack));
-    res.status(err.status).send(err.message);
+    res.status(err.status || 500).send(err.message);
 });
