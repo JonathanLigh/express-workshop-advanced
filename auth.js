@@ -1,6 +1,8 @@
 var secret = 'plz donut look, is secret';
+// We will discuss tomorrow a better way of handling secrets and keys
 
 module.exports = {
+  // Notice this is just a route handler function we are exporting, normally called a controller
   checkAuth: function(req, res, next) {
     if (req.body.pass === secret) {
       return next();
