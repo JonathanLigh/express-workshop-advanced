@@ -1,4 +1,5 @@
-var chance = require('chance');
+var Chance = require('chance');
+var chance = new Chance();
 
 var data = [];
 

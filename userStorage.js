@@ -1,5 +1,3 @@
-var _ = require('lodash');
-
 var data = {
   jason: {
     age: 43,
