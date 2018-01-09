@@ -31,5 +31,9 @@ module.exports = {
 
   getUserByName: function (name) {
     return data[name];
+  },
+
+  createUser: function(name, age, salary) {
+    data[name] = { age: age, salary: salary};
   }
 };

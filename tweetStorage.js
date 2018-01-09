@@ -14,7 +14,7 @@ module.exports = {
   getAllTweets: function () {
     return data;
   },
-  postTweet: function (tweet) {
-    data.push(tweet);
+  createTweet: function (string) {
+    data.push({tweet: string});
   }
 };
