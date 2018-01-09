@@ -3,8 +3,8 @@ var app = express();
 var chalk = require('chalk');
 var routes = require('./routes');
 
-app.use('/', function () {
-  console.log('This is the root route!');
+app.get('/', function (req, res, next) {
+  res.send('Root Route');
 });
 
 
