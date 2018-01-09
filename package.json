@@ -1,0 +1,27 @@
+{
+  "name": "express-workshop-advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "start-dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanLigh/express-workshop-advanced.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanLigh/express-workshop-advanced/issues"
+  },
+  "homepage": "https://github.com/JonathanLigh/express-workshop-advanced#readme",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "chance": "^1.0.13",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  }
+}
