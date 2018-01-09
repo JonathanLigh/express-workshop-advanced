@@ -8,8 +8,14 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', auth.checkAuth, function (req, res, next) {
-  Tweet.createTweet(req.body.tweet);
-  res.status(204).end();
+  if (!req.body.tweet) {
+    var err = new Error('Invalid input');
+    err.status = 400;
+    next(err);
+  } else {
+    Tweet.createTweet(req.body.tweet);
+    res.status(204).end();
+  }
 });
 
 module.exports = router;

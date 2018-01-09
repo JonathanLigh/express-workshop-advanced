@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 
 app.use('/api', require('./routes'));
 
+app.use('/*', function(req, res) {
+  res.status(404).send('Route not found');
+})
 
 var PORT = 8000;
 
