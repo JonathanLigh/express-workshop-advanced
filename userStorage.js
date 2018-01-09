@@ -26,10 +26,10 @@ var data = {
 module.exports = {
 
   getAllUsers: function () {
-    return Object.keys(data);
+    return Object.values(data);
   },
 
   getUserByName: function (name) {
-    return _.cloneDeep(_.filter(data, name));
+    return data[name];
   }
 };
